@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            margin-top: 2vh;
+            text-align: center;
+        }
+        
+        .lm {
+            display: flex;
+            flex-wrap: wrap;
+            width: 40vw;
+            justify-content: center;
+            align-items: center;
+            margin: 8vh auto;
+        }
+        
+        .lk {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 11vw;
+            height: 23vh;
+            border: 2px solid rebeccapurple;
+            margin: 0;
+        }
+        
+        .txt {
+            font-size: 10vh;
+        }
+        
+        .bt {
+            border-top: 0;
+        }
+        
+        .bb {
+            border-bottom: 0;
+        }
+        
+        .bl {
+            border-left: 0;
+        }
+        
+        .br {
+            border-right: 0;
+        }
+        
+        #won {
+            position: absolute;
+            top: 40vh;
+            left: 40vw;
+            font-size: 10vw;
+        }
+        
+        .lk:hover {
+            cursor: pointer;
+            background-color: rgb(236, 235, 235);
+        }
+        
+        @media screen and (max-width: 500px) {
+            .lm {
+                width: 100%;
+            }
+            .lk {
+                width: 28vw;
+            }
+            .lk:hover {
+                background-color: rgb(219, 219, 219);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>X0X0</h1>
+    <div id="won"></div>
+    <div class="lm">
+        <div class="lk bt bl"><span class="txt"></span></div>
+        <div class="lk bt"><span class="txt"></span></div>
+        <div class="lk bt br"><span class="txt"></span></div>
+        <div class="lk bl"><span class="txt"></span></div>
+        <div class="lk"><span class="txt"></span></div>
+        <div class="lk br"><span class="txt"></span></div>
+        <div class="lk bl bb"><span class="txt"></span></div>
+        <div class="lk bb"><span class="txt"></span></div>
+        <div class="lk bb br"><span class="txt"></span></div>
+
+    </div>
+    <script>
+        let turn = "x";
+
+        function changeturn() {
+            if (turn == "x") {
+                turn = "0";
+            } else {
+                turn = "x";
+            }
+        }
+
+        function reset() {
+            let text = document.getElementsByClassName('txt');
+            text[0].innerText = "";
+            text[1].innerText = "";
+            text[2].innerText = "";
+            text[3].innerText = "";
+            text[4].innerText = "";
+            text[5].innerText = "";
+            text[6].innerText = "";
+            text[8].innerText = "";
+            text[7].innerText = "";
+        }
+
+        function cheakwin() {
+            let txt = document.getElementsByClassName('txt');
+            let wins = [
+                [0, 1, 2],
+                [3, 4, 5],
+                [6, 7, 8],
+                [0, 3, 6],
+                [1, 4, 7],
+                [2, 5, 8],
+                [0, 4, 8],
+                [2, 4, 6]
+            ]
+            wins.forEach(e => {
+                if ((txt[e[0]].innerText === txt[e[1]].innerText) && (txt[e[2]].innerText === txt[e[1]].innerText) && (txt[e[0]].innerText !== "")) {
+                    changeturn();
+                    document.getElementById("won").innerText = turn + " won";
+                    setTimeout(() => {
+                        document.getElementById("won").innerText = "";
+                        reset();
+                    }, 1000);
+                } else if ((txt[0].innerText !== "") && (txt[1].innerText !== "") && (txt[2].innerText !== "") && (txt[3].innerText !== "") && (txt[4].innerText !== "") && (txt[5].innerText !== "") && (txt[6].innerText !== "") && (txt[7].innerText !== "") && (txt[8].innerText !== "")) {
+                    document.getElementById("won").innerText = "match draw";
+                    setInterval(() => {
+                        location.reload();
+                    }, 1000);
+                }
+            })
+        }
+        let element = document.getElementsByClassName("lk");
+        Array.from(element).forEach((e) => {
+            let lk = e.querySelector('.txt');
+            e.addEventListener('click', () => {
+                if (lk.innerText == "") {
+                    lk.innerText = turn;
+                    changeturn();
+                    cheakwin();
+
+                }
+            })
+
+        })
+    </script>
+</body>
+
+</html>
