@@ -5,12 +5,327 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Swayam siddha dash</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-style: inherit;
+        }
+        
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+        
+        ul {
+            display: flex;
+            background-color: rgba(11, 10, 19, 0.884);
+        }
+        
+        ul li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 15px;
+            list-style: none;
+        }
+        
+        ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .container {
+            padding-top: 60px;
+            min-height: 100vh;
+            background-color: rgba(11, 10, 19, 0.884);
+            color: white;
+        }
+        
+        #logo {
+            margin-right: 15px;
+        }
+        
+        .mh {
+            min-height: 100vh;
+        }
+        
+        .tb {
+            font-size: 40px;
+        }
+        
+        .ty {
+            color: yellow;
+        }
+        
+        .fb {
+            font-weight: bold;
+        }
+        
+        .fs {
+            font-style: italic;
+        }
+        
+        .doc {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: baseline;
+            margin-left: 4vw;
+        }
+        
+        .btn {
+            width: 120px;
+            height: 25px;
+            color: rgb(11, 1, 66);
+            font-size: large;
+            font-weight: bold;
+            background-color: yellow;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .m5 {
+            margin: 3vh;
+        }
+        
+        .licon {
+            position: absolute;
+            bottom: 20px;
+            text-align: center;
+            width: 90%;
+        }
+        
+        .icon {
+            font-size: 5vw;
+            margin: 0 5vw;
+        }
+        
+        .ts {
+            text-shadow: 0px 0px 23px rgb(241, 241, 146)
+        }
+        
+        .bs {
+            box-shadow: 0px 0px 5px rgb(241, 241, 146);
+        }
+        
+        .i {
+            position: absolute;
+            top: 100px;
+            right: 5vw;
+            animation-name: slide;
+            animation-duration: 2s;
+        }
+        
+        .i2 {
+            position: absolute;
+            top: 100px;
+            right: 5vw;
+            animation-name: slide2;
+            animation-duration: 2s;
+        }
+        
+        .x {
+            background: -webkit-linear-gradient(rgb(231, 43, 37), rgb(255, 255, 255), rgb(233, 218, 16), rgb(231, 43, 37));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .t {
+            background: -webkit-linear-gradient(rgb(121, 37, 231), rgb(255, 255, 255), rgb(89, 58, 230), rgb(255, 255, 255));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .m {
+            background: -webkit-linear-gradient(rgb(135, 247, 135), rgb(113, 113, 250), blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .tg {
+            color: rgb(0, 195, 255);
+        }
+        
+        .tq {
+            color: rgb(255, 95, 156);
+        }
+        
+        .m2 {
+            margin: 4px;
+        }
+        
+        @keyframes slide {
+            50% {
+                right: 20vw;
+            }
+            100% {
+                right: 5vw;
+            }
+        }
+        
+        @keyframes slide2 {
+            50% {
+                top: 50vh;
+            }
+            100% {
+                top: 100px;
+            }
+        }
+        
+        .menu {
+            color: white;
+            padding: 15px;
+            display: none;
+        }
+        
+        @media screen and (max-width: 750px) {
+            body {
+                background-color: red;
+            }
+            ul {
+                display: block;
+                text-align: center;
+            }
+            ul li {
+                display: none;
+            }
+            .mt {
+                margin-top: 15vh;
+            }
+            .menu {
+                display: contents;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Swayam siddha Dash</h1>
-    <h5>personal portfolio website</h5>
+    <header>
+        <nav>
+            <ul>
+                <div style="display: flex;">
+
+                    <i id="menu" class="fa-solid fa-bars menu" onclick="togglenav()"></i>
+                    <!-- <i id="x" class="fa-solid fa-xmark" style="color: white; padding: 15px; display: none;"></i> -->
+                    <h1 style="color: white; padding: 15px;">Swayam Siddha Dash</h1>
+                </div>
+
+                <li><a href="#1">Home</a></li>
+                <li><a href="#3">Education & Skills</a></li>
+                <li><a href="SWAYAM_SIDDHA_DASH_RESUME (1) (1) (1)[331].pdf">Resume</a></li>
+                <li><a href="#2">Personal Details</a></li>
+                <li><a href="#4">Contact</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <div id="1" class="mh doc mt">
+            <div class="tb">I am <i class="ty fb fs ts">Swayam Siddha Dash</i></div>
+            <div>This is my official Portfolio website to showcase my all works related to<br> web development and UI design</div>
+            <a class="btn m5 bs" href="SWAYAM_SIDDHA_DASH_RESUME (1) (1) (1)[331].pdf">Download CV</a>
+            <div>
+
+                <img class="i" style="width: 300px;" src="1663984834781.png" alt="">
+                <img class="i2" style="width: 200px;" src="1663984834734.png" alt="">
+                <!-- <img src="1663984834759.png" alt=""> -->
+            </div>
+            <div class="licon">
+                <a href="https://www.instagram.com/liku60/?hl=en"><i class="icon fa-brands fa-instagram x" ></i></a>
+                <a href="https://www.facebook.com/liku.liku.3760"><i class="icon fa-brands fa-facebook " style="color: rgb(55, 55, 255);"></i></a>
+                <a href=""><i class="icon fa-brands fa-twitter t"></i></a>
+                <a href="mailto: likudash054@gmail.com"> <i class="icon fa-solid fa-envelope m"></i></a>
+            </div>
+        </div>
+
+
+
+
+
+        <div id="3" class="mh doc">
+            <h1 class="ty ts m5">Education</h1>
+            <div class="fb m2 tg"><i class=" m2 tq">10th</i> from kabatbandha high school kabatabandha ,passing in the year 2016 with 68% </div>
+            <div class="fb m2 tg"><i class=" m2 tq">+2</i> from Dharmasala junior ,jajpur,passing in the year 2018 with 48%</div>
+
+            <div class="fb m2 tg"> <i class=" m2 tq">BCA</i> from Rajadhani College of Science Technology & Management ,Bhubaneswar , passing in the year 2021 with 7.72 cgpa</div>
+
+            <div class="fb m2 tg"> Now continuing <i class=" m2 tq"> MCA</i> in Rajadhani Engineering college ,Bhubaneswar</div>
+
+            <div class="skill m5">
+                <h1 class="ty ts m5">Skills</h1>
+                <div class="m2"> 1. <i class="tg  fb"> HTML  </i><i class="fa-solid fa-code tb x"></i> <i></i></div>
+                <div class="m2"> 2. <i class="tg  fb"> CSS </i><i class="fa-regular fa-file-code tb t"></i> <i></i> </div>
+                <div class="m2"> 3. <i class="tg  fb"> JAVA SCRIPT</i><i class="fa-brands fa-square-js tb x"></i> <i></i> </div>
+                <div class="m2"> 4. <i class="tg  fb"> React </i><i class="fa-brands fa-react tb t"></i> <i></i> </div>
+                <div class="m2"> 5. <i class="tg  fb"> NODE JS</i><i class="fa-brands fa-node tb x"></i> <i></i> </div>
+                <div class="m2"> 6. <i class="tg  fb"> MONGO DB</i> <i></i> </div>
+                <div class="m2"> 7. <i class="tg  fb"> WORDPRESS</i><i class="fa-brands fa-wordpress tb t"></i> <i></i> </div>
+
+            </div>
+
+        </div>
+        <div id="2" class="mh doc">
+            <div class=" m2 tq"> NAME :
+                <i class="fb ty">SWAYAM SIDDHA DASH </i>
+            </div>
+            <div class=" m2 tq"> S/O :
+                <i class="fb ty">SWASTIK KUMAR DASH</i>
+            </div>
+            <div class=" m2 tq"> AT :
+                <i class="fb ty">KABATABANDHA</i>
+            </div>
+            <div class=" m2 tq"> PO :
+                <i class="fb ty">KABATABANDHA</i>
+            </div>
+            <div class=" m2 tq"> DIST :
+                <i class="fb ty">JAJPUR</i>
+            </div>
+            <div class=" m2 tq"> STATE :
+                <i class="fb ty">ODISHA</i>
+            </div>
+            <div class=" m2 tq"> PIN :
+                <i class="fb ty">755023</i>
+            </div>
+            <div class=" m2 tq"> MOBILE NO :
+                <i class="fb ty">9040607242</i>
+            </div>
+            <div class=" m2 tq"> MAIL :
+                <i class="fb ty">LIKUDASH054@GMAIL.COM</i>
+            </div>
+        </div>
+
+        <div id="4" class="mh doc">
+            <a href="https://www.instagram.com/liku60/?hl=en"><i class="icon fa-brands fa-instagram x" > liku60</i></a>
+            <a href="https://www.facebook.com/liku.liku.3760"><i class="icon fa-brands fa-facebook " style="color: rgb(55, 55, 255);"> Swayam siddha dash</i></a>
+            <a href=""><i class="icon fa-brands fa-twitter t"></i></a>
+            <a href="mailto: likudash054@gmail.com"><i class="icon fa-solid fa-envelope m"> likudash054@gmail.com </i></a>
+            <i class="icon fa-solid fa-phone" style="color: lightgreen;"> 9040607242</i>
+        </div>
+    </div>
+    <script>
+        const togglenav = () => {
+            let doc = document.getElementsByTagName("li");
+            for (let index = 0; index < doc.length; index++) {
+                const element = doc[index];
+                if (element.style.display = "none") {
+
+                    element.style.display = "block"
+                } else {
+                    element.style.display = "none"
+                }
+            }
+        }
+    </script>
+
+
+    <script src="https://kit.fontawesome.com/f594aceaa6.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
