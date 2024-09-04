@@ -9,35 +9,11 @@
     <title>Swayam siddha dash</title>
     <style>
         * {
-            margin: 0;
-            padding: 0;
+           
             font-style: inherit;
         }
         
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1;
-        }
-        
-        ul {
-            display: flex;
-            background-color: rgba(11, 10, 19, 0.884);
-        }
-        
-        ul li {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 15px 15px;
-            list-style: none;
-        }
-        
-        ul li a {
-            color: white;
-            text-decoration: none;
-        }
+       
         
         .container {
             padding-top: 60px;
@@ -183,47 +159,47 @@
             display: none;
         }
         
-        @media screen and (max-width: 750px) {
-            body {
-                background-color: red;
-            }
-            ul {
-                display: block;
-                text-align: center;
-            }
-            ul li {
-                display: none;
-            }
-            .mt {
-                margin-top: 15vh;
-            }
-            .menu {
-                display: contents;
-            }
-        }
+       
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
 </head>
 
 <body>
 
     <header>
-        <nav>
-            <ul>
-                <div style="display: flex;">
+         <nav class="navbar navbar-expand-lg bg-body-tertiary z-1  bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">SWAYAM SIDDHA DASH</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#1">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#3">Education & Skills </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="res6.pdf">Resume </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#2"> Personal details </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#4">Contact </a>
+                    </li>
 
-                    <div class="menu"><i id="menu" class="fa-solid fa-bars " style="padding: 15px;" onclick="togglenav()"></i></div>
-                    <!-- <i id="x" class="fa-solid fa-xmark" style="color: white; padding: 15px; display: none;"></i> -->
-                    <h1 style="color: white; padding: 15px;">Swayam Siddha Dash</h1>
-                </div>
 
-                <li><a href="#1">Home</a></li>
-                <li><a href="#3">Education & Skills</a></li>
-                <li><a href="SWAYAM_SIDDHA_DASH_RESUME (1) (1) (1)[331].pdf">Resume</a></li>
-                <li><a href="#2">Personal Details</a></li>
-                <li><a href="#4">Contact</a></li>
+                </ul>
 
-            </ul>
-        </nav>
+            </div>
+        </div>
+    </nav>
+
+       
     </header>
 
     <div class="container">
@@ -231,7 +207,7 @@
         <div id="1" class="mh doc mt">
             <div class="tb">I am <i class="ty fb fs ts">Swayam Siddha Dash</i></div>
             <div>This is my official Portfolio website to showcase my all works related to<br> web development and UI design</div>
-            <a class="btn m5 bs" href="SWAYAM_SIDDHA_DASH_RESUME (1) (1) (1)[331].pdf">Download CV</a>
+            <a class="btn m5 bs" href="res6.pdf">Download CV</a>
             <div>
 
                 <img class="i" style="width: 300px;" src="1663984834781.png" alt="">
@@ -323,6 +299,8 @@
         }
     </script>
 
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 
     <script src="https://kit.fontawesome.com/f594aceaa6.js" crossorigin="anonymous"></script>
 </body>
